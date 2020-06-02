@@ -1,0 +1,63 @@
+
+<%- include('partials/header'); %>
+
+<body>
+
+    <%- include('partials/header-navbar'); %> 
+     	
+
+       		<div class="product-essential container">
+            	<div class="row">
+ 					<div class="product-img-box col-6">
+       					<div class="product-image">
+							<img src="../images/<%= verdura.image %>" alt="<%= verdura.nombre %>">
+						</div>
+					</div>
+
+ 					<div class="product-shop col-6">
+						<h1><%= verdura.nombre %></h1>
+
+						<div class="price-box price">
+							<span>$<%= verdura.precio %></span>
+						</div>
+						<div>
+							<a class="editar" href="/prod/Prod/edit/<%= verdura.id %>"><span>Editar</span></a>
+						</div>
+						<div>
+							<form action="/prod/Prod/delete/<%= verdura.id %>?_method=DELETE" method="POST">
+								<button type="submit" class="btn btn-success">Eliminar</button>
+							</form>
+						</div>
+						<div class="action">
+							<a class="button btn-cart" title='Añadir al carrito' data-quantity="1" data-product_id="7121" href='?add-to-cart=7121'>
+							  <span>Añadir al carrito </span>
+							</a>
+						  </div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+  <div class="tab-description col-11">
+    <h3>¿Que es?</h3>
+	<p>Es prima hermana del brócoli, la coliflor y de los repollitos de Bruselas.</p>
+	<p>Esta hortaliza vino a desbancar a la espinaca, con Popeye y todo, se está convirtiendo en la reina de los productos verdes.<br />
+	Muchos la estamos descubriendo y otros ya la consideran popular cuando de cuidar el cuerpo y la salud se trata,<br />
+	es excepcionalmente rica en nutrientes, muy benéfica para la salud y de bastante buen sabor.</p>
+	<p>Una porción  de<i> kale</i> contiene escasas 33 calorías, es muy rica en calcio, vitaminas A, C y K, en mayor proporción, sin contar su alto contenido de minerales, antioxidantes y fibra.</p>
+	<hr/>
+	<h3>Conservación</h3>
+	<p>Tiene que refrigerarse en bolsas de plástico para no perder sus nutrientes y para que sus hojas permanezcan frescas -para que sepan, los de hojas más pequeñas son los de mejor sabor-. Se guarda hasta por 5 días en el refrigerador y solamente hay que lavar las hojas que se van a usar inmediatamente.</p>
+	<hr/>
+		<h3>Tips para comer <i><%= verdura.nombre %> </i></h3>
+			<ul>
+				<li><strong>Es ideal para hacer salsas</strong> por sus abundantes nutrientes, a las pasta, como la clásica de de coditos o fideos, agréguenle pedacitos de <i>kale</i> como a veces lo hacemos con espinaca.</li>
+				<li><strong>Sustituyan la lechuga del sándwich de siempre, por <i>kale</i></strong>. El sándwich de cebolla caramelizada con queso derretido y <i>kale </i>es delicioso.</li>
+				<li>Prepara <strong>una ensalada de <i>kale</i> con trozos de pollo, o salmón a la parrilla</strong> y una vinagreta de partes iguales de aceite y caldo de pollo con una yema de huevo, es una deliciosa opción.</li>
+			</ul>
+</div>
+
+
+<%- include('partials/footer'); %>
