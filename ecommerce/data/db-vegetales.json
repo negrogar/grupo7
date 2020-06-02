@@ -1,0 +1,189 @@
+[
+ {
+  "id": 1,
+  "nombre": "Acelga-Atada",
+  "precio": 72,
+  "descuento": 5,
+  "categoria": 2,
+  "descripcion": "Hay Inflacion",
+  "image": "Acelga-Atada.jpg"
+ },
+ {
+  "id": 2,
+  "nombre": "Ajo",
+  "categoria": 1,
+  "precio": 52,
+  "image": "Ajo.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "Berenjena",
+  "precio": 25,
+  "descuento": 5,
+  "categoria": 2,
+  "descripcion": "veremos 3",
+  "image": "Berenjena.jpg"
+ },
+ {
+  "id": 6,
+  "nombre": "Calabaza",
+  "categoria": 1,
+  "precio": 38,
+  "image": "Calabaza.jpg"
+ },
+ {
+  "id": 7,
+  "nombre": "Cebolla-Morada",
+  "categoria": 1,
+  "precio": 45,
+  "image": "Cebolla-Morada.jpg"
+ },
+ {
+  "id": 8,
+  "nombre": "Cebolla-Verdeo",
+  "categoria": 1,
+  "precio": 5,
+  "image": "Cebolla-Verdeo.jpg"
+ },
+ {
+  "id": 9,
+  "nombre": "Chauchas",
+  "categoria": 1,
+  "precio": 5,
+  "image": "Chauchas.jpg"
+ },
+ {
+  "id": 10,
+  "nombre": "Kale",
+  "categoria": 1,
+  "precio": 20,
+  "image": "Kale.jpg"
+ },
+ {
+  "id": 11,
+  "nombre": "Lechuga-Morada",
+  "categoria": 1,
+  "precio": 5,
+  "image": "Lechuga-Morada.jpg"
+ },
+ {
+  "id": 12,
+  "nombre": "Lechuga-Repollada",
+  "categoria": 1,
+  "precio": 5,
+  "image": "Lechuga-Repollada.jpg"
+ },
+ {
+  "id": 13,
+  "nombre": "Maple-Huevos",
+  "categoria": 1,
+  "precio": 150,
+  "image": "Maple-Huevos.jpg"
+ },
+ {
+  "id": 14,
+  "nombre": "Palta",
+  "categoria": 1,
+  "precio": 33,
+  "image": "Palta.jpg"
+ },
+ {
+  "id": 15,
+  "nombre": "Papa-Lavada",
+  "categoria": 2,
+  "precio": 40,
+  "image": "Papa-Lavada.jpg"
+ },
+ {
+  "id": 16,
+  "nombre": "Pimiento-Amarillo",
+  "precio": 45,
+  "descuento": 5,
+  "categoria": 1,
+  "descripcion": "Mucha cosecha",
+  "image": "Pimiento-Amarillo.jpg"
+ },
+ {
+  "id": 17,
+  "nombre": "Pimiento-Rojo",
+  "categoria": 2,
+  "precio": 28,
+  "image": "Pimiento-Rojo.jpg"
+ },
+ {
+  "id": 18,
+  "nombre": "Portobello",
+  "categoria": 2,
+  "precio": 55,
+  "image": "Portobello.jpg"
+ },
+ {
+  "id": 19,
+  "nombre": "Radicheta",
+  "categoria": 2,
+  "precio": 10,
+  "image": "Radicheta.jpg"
+ },
+ {
+  "id": 20,
+  "nombre": "Tomate-Perita",
+  "categoria": 2,
+  "precio": 17,
+  "image": "Tomate-Perita.jpg"
+ },
+ {
+  "id": 21,
+  "nombre": "Tomates",
+  "categoria": 2,
+  "precio": 32,
+  "image": "Tomates.jpg"
+ },
+ {
+  "id": 22,
+  "nombre": "Zanahoria",
+  "categoria": 2,
+  "precio": 28,
+  "image": "Zanahoria.jpg"
+ },
+ {
+  "id": 23,
+  "nombre": "Zapallito-Verde",
+  "categoria": 2,
+  "precio": 25,
+  "image": "Zapallito-Verde.jpg"
+ },
+ {
+  "id": 24,
+  "nombre": "Zapallo",
+  "categoria": 2,
+  "precio": 50,
+  "image": "Zapallo.jpg"
+ },
+ {
+  "id": 25,
+  "nombre": "Pimenton-Rojizo",
+  "precio": 452,
+  "categoria": 3,
+  "descuento": 4,
+  "descripcion": "ESTE ES EL POWER",
+  "image": "1590286303415.jpg"
+ },
+ {
+  "id": 26,
+  "nombre": "Batata",
+  "precio": 86,
+  "descuento": 8,
+  "descripcion": "Es nutritvo",
+  "categoria": 2,
+  "image": "1590536799334.jpg"
+ },
+ {
+  "id": 27,
+  "nombre": "Brocoli",
+  "precio": 23,
+  "descuento": 4,
+  "descripcion": "Prueba",
+  "categoria": 2,
+  "image": "1590537266005.jpg"
+ }
+]
