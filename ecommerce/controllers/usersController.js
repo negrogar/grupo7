@@ -12,13 +12,14 @@ const controller = {
         });
     },
     store: (req, res, next) => {
+        const avatar = req.files[0].filename;
         const newUser = {
             id: users[users.length - 1].id + 1,
             name: req.body.name,
             lastname: req.body.lastname,
             password: bcrypt.hashSync(req.body.password, 10),
             email: req.body.email,
-            avatar: req.files[0].filename
+            avatar: avatar
         };
 
         // console.log(...users);
@@ -35,7 +36,6 @@ const controller = {
     validate: (req, res) => {
         const email = req.body.email;
         const password = req.body.password;
-
         const user = users.find((user) => {
             return user.email == email;
         });
@@ -49,9 +49,15 @@ const controller = {
             res.render('login', {
                 error: 'Password incorrecto!'
             });
+        }else{
+            res.render('perfil', {
+                title: 'Tu Perfil',
+                user: user
+            })
         }
 
-        res.send(user)
+        
+
     }
 };
 

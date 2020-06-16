@@ -1,0 +1,23 @@
+<%- include('partials/header'); %>
+
+<body>
+    <%- include('partials/header-navbar'); %>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <br>
+            </div>
+            <div class="col-10">
+                <!--Este div solo se mostraria cuando el carrito este vacio-->
+                <div class="alert alert-danger" role="alert">
+                   Tu carrito esta vacío.
+                </div>
+
+            </div>
+            <div class="col-12">
+                <a href="/Home"><button type="button" class="btn btn-outline-success">Volver a la tienda</button></a>
+            </div>
+        </div>
+    </div>
+           
+    <%- include('partials/footer'); %>

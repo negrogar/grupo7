@@ -23,16 +23,17 @@
 						<div>
 							<a class="editar" href="/prod/Prod/edit/<%= verdura.id %>"><span>Editar</span></a>
 						</div>
-						<div>
-							<form action="/prod/Prod/delete/<%= verdura.id %>?_method=DELETE" method="POST">
-								<button type="submit" class="btn btn-success">Eliminar</button>
-							</form>
-						</div>
 						<div class="action">
 							<a class="button btn-cart" title='Añadir al carrito' data-quantity="1" data-product_id="7121" href='?add-to-cart=7121'>
 							  <span>Añadir al carrito </span>
 							</a>
-						  </div>
+						</div>
+						<br>
+						<div>
+							<form action="/prod/Prod/delete/<%= verdura.id %>?_method=DELETE" method="POST">
+								<button type="submit" class="btn btn-danger">Eliminar</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>

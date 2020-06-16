@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-let DetalleController = {
+const DetalleController = {
   
   detalle: function (req, res) {
     const id = req.params.id;

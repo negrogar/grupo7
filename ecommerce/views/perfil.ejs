@@ -1,0 +1,27 @@
+<!--VISTA DE PERFIL CON LOS DATOS DEL JSON DE USUARIOS-->
+<%- include('partials/header'); %>
+
+<body>
+    <%- include('partials/header-navbar'); %>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-4"><img src="../avatar/<%=user.avatar%>" alt="fotoDePerfil" class="img-thumbnail">
+                </div>
+                <div class="col-6"><div class="alert alert-success" role="alert">
+                    <h4>Bienvenido a tu perfil <%=user.email%>!</h4>
+                  </div>
+                </div>
+                <div class="col-2">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="/carrito"> Tu Carrito</a></li>
+                        <li class="list-group-item"><a href="/Home"> Compras recientes</a></li>
+                        <li class="list-group-item"><a href="/Home"> Cerrar Sesion</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    <%- include('partials/footer'); %>

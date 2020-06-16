@@ -11,8 +11,10 @@
  {
   "id": 2,
   "nombre": "Ajo",
+  "precio": 55,
+  "descuento": 0,
   "categoria": 1,
-  "precio": 52,
+  "descripcion": "",
   "image": "Ajo.jpg"
  },
  {
