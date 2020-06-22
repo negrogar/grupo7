@@ -41,13 +41,6 @@
   "image": "Cebolla-Morada.jpg"
  },
  {
-  "id": 8,
-  "nombre": "Cebolla-Verdeo",
-  "categoria": 1,
-  "precio": 5,
-  "image": "Cebolla-Verdeo.jpg"
- },
- {
   "id": 9,
   "nombre": "Chauchas",
   "categoria": 1,

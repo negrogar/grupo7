@@ -3,9 +3,15 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const fs = require('fs');
+const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); 
 
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController');
+const guessMiddleware = require("../middlewares/guessMiddleware");
+const usersMiddleware = require("../middlewares/usersMiddleware");
+let { check, validationResult, body } = require('express-validator');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -18,10 +24,25 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 /*** CREATE ONE  ***/ 
-router.get('/create/', usersController.root); /* GET - Form to create */
-router.post('/create/', upload.any(), usersController.store); /* POST - Store in DB */
+router.get('/create/', guessMiddleware, usersController.root); /* GET - Form to create */
+router.post('/create/', upload.any(), [
 
-router.get('/login/', usersController.login); /* GET - Form to create */
+		check('name').isLength().withMessage('Este campo debe estar completo'),
+		check('lastname').isLength().withMessage('Este campo debe estar completo'),
+		check('email').isEmail().withMessage('Este campo debe ser un mail valido'),
+		check('password').isLength({min: 5}).withMessage('Minimo de 5 caracteres alfanumericos'),
+        body('email').custom(function(value) {
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].email == value) {
+                    return false;
+                }
+            }
+            return true;
+        }).withMessage('Usuario ya existente')
+
+	], usersController.store); /* POST - Store in DB */
+
+router.get('/login/', guessMiddleware, usersController.login); /* GET - Form to create */
 router.post('/login/', usersController.validate); /* Post - Validation login */
 
 
