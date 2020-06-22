@@ -8,11 +8,6 @@
 	<!-- /Header -->
 
 	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Ingresar</h2>
-			</div>
-		</div>
 		<div class="col-12">
 			
 			<div class="alert alert-danger" role="alert">
@@ -21,19 +16,24 @@
 			
 			<form action="/users/login" method="POST">
 				<div class="row product-detail">
-					<div class="col-12 col-md-6">
-						<label for="email" class="form-label">E-Mail:</label>
-						<input type="text" id="email" name="email" placeholder="Ej: carlos@mercadoliebre.com" class="form-input">
+					<div class="form-group col-12 col-md-6">
+						<label for="email" class="form-label">e-Mail:</label>
+						<input type="text" id="email" name="email" placeholder="Ej: luis@gmail.com" class="form-control">
 					</div>
-					<div class="col-12 col-md-6">
-						<label for="password" class="form-label">Password:</label>
-						<input type="password" id="password" name="password" class="form-input">
+					<div class="form-group col-12 col-md-6">
+						<label for="password" class="form-label">Contraseña:</label>
+						<input type="password" id="password" name="password" class="form-control">
 					</div>
 					<div class="col-12">
-						<button type="submit" class="buy-now-button">Ingresar</button>
+						<button type="submit" class="btn btn-success">Ingresar</button>
 					</div>
 				</div>
+				 	<br>
+					<label for="recordar">¿Desea mantener sesión iniciada?</label>
+		        	<input type="checkbox" value="recordar" name="recordar" id="recordar">
+		        	<br>
 			</form>
+			
 		</div>
 
 	</div>

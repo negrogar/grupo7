@@ -20,7 +20,7 @@ const HomeController = (req, res) => {
   });
 
   res.render('Home', { 
-    title: 'VEGETALES',
+    title: 'Tienda',
     masVendidos: masVendidos,
     enOferta: enOferta,
     ultimosAgregados: ultimosAgregados,

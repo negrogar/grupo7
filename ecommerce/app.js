@@ -4,11 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride =  require('method-override'); // Para poder usar los métodos PUT y DELETE
-
+var session = require('express-session');
 var indexRouter = require('./routes/index');
-var prodRouter = require('./routes/prod')
+var prodRouter = require('./routes/prod');
 var usersRouter = require('./routes/users');
-
+var cookieMiddleware = require('./middlewares/cookieMiddleware');
+const ejsLint = require('ejs-lint');
 var app = express();
 
 // view engine setup
@@ -21,6 +22,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
+app.use(session({
+  secret: 'secreto!!!',
+  resave: false,
+  saveUninitialized: true,
+}));
+//app.use(cookieMiddleware);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

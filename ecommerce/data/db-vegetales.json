@@ -11,8 +11,10 @@
  {
   "id": 2,
   "nombre": "Ajo",
+  "precio": 55,
+  "descuento": 0,
   "categoria": 1,
-  "precio": 52,
+  "descripcion": "",
   "image": "Ajo.jpg"
  },
  {
@@ -37,13 +39,6 @@
   "categoria": 1,
   "precio": 45,
   "image": "Cebolla-Morada.jpg"
- },
- {
-  "id": 8,
-  "nombre": "Cebolla-Verdeo",
-  "categoria": 1,
-  "precio": 5,
-  "image": "Cebolla-Verdeo.jpg"
  },
  {
   "id": 9,

@@ -36,7 +36,7 @@ let ProdController = {
 		let finalProductos = [...productos, newProduct];
 		console.log(finalProductos);
 		fs.writeFileSync(productosFilePath, JSON.stringify(finalProductos, null, ' '));
-		res.send("Producto Creado con Exito");
+		res.redirect('/Home');
 	},
 
 	// Update - Form to edit

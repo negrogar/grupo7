@@ -6,38 +6,50 @@
 	<!-- Header -->
 	<%- include('partials/header-navbar') %>
 	<!-- /Header -->
-
+	
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
 				<h2 class="products-title">Nuevo usuario</h2>
 			</div>
 		</div>
+		
 		<div class="col-12">
+
+			<% if (typeof errors != 'undefined') { %>
+					<p style="color: #00B7FF">ERROR</p>
+					<ul>
+						<% for (let i = 0; i < errors.length; i++) { %>
+							<li>
+								<%= errors[i].msg %>	
+							</li>
+					<% } %>
+					</ul>
+		<% } %>
 			<form action="/users/create" method="POST" enctype="multipart/form-data">
 				<div class="row product-detail">
 					<div class="col-12 col-md-6">
-						<label for="name" class="form-label">Nombre:</label>
-						<input type="text" id="name" name="name" placeholder="Ej: Carlos" class="form-input">
+						<label for="name" class="form-group">Nombre:</label>
+						<input type="text" id="name" name="name" placeholder="Ej: Luis" class="form-control">
 					</div>
 					<div class="col-12 col-md-6">
-						<label for="lastname" class="form-label">Apellido:</label>
-						<input type="text" id="lastname" name="lastname" placeholder="Ej: García" class="form-input">
+						<label for="lastname" class="form-group">Apellido:</label>
+						<input type="text" id="lastname" name="lastname" placeholder="Ej: Frieri" class="form-control">
 					</div>
 					<div class="col-12 col-md-6">
-						<label for="email" class="form-label">E-Mail:</label>
-						<input type="text" id="email" name="email" placeholder="Ej: carlos@mercadoliebre.com" class="form-input">
+						<label for="email" class="form-group">E-Mail:</label>
+						<input type="text" id="email" name="email" placeholder="Ej: luis@gmail.com" class="form-control">
 					</div>
 					<div class="col-12 col-md-6">
-						<label for="password" class="form-label">Password:</label>
-						<input type="password" id="password" name="password" class="form-input">
+						<label for="password" class="form-group">Password:</label>
+						<input type="password" id="password" name="password" class="form-control">
 					</div>
 					<div class="col-12 col-md-6">
 						<label for="imagenPerfil" class="form-label">Imagen de perfil:</label>
 						<input type="file" name="perfil" id="imagenPerfil">
 					</div>
 					<div class="col-12">
-						<button type="submit" class="buy-now-button">Registrarme</button>
+						<button type="submit" class="btn btn-success">Registrarme</button>
 					</div>
 				</div>
 			</form>

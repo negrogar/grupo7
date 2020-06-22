@@ -48,5 +48,69 @@
   "password": "$2b$10$3.ghdweYrJmZpu9gOsxHiO7311H3BWB9xWZYc3ujbHAFbvLyUD7hm",
   "email": "karinaestudio@gmail.com",
   "avatar": "1591380663090.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Tobias",
+  "lastname": "Garreton",
+  "password": "$2b$10$GEUrbP9hHE4JjhrVHBqKz.ztucV3itzim4ys9t8ueFX0/7Vv8bhTi",
+  "email": "tobigarreton@gmail.com",
+  "avatar": "1591818753389.jpg"
+ },
+ {
+  "id": 9,
+  "name": "fACundo",
+  "lastname": "Garreton",
+  "password": "$2b$10$.GG8h8/zKcgDAD8Z4mAWee2Il6gCQBTyXpjvzrDmWHEkP8VwiR8ce",
+  "email": "fgarreton@gmail.com",
+  "avatar": "1591825623883.jpeg"
+ },
+ {
+  "id": 10,
+  "name": "prueba",
+  "lastname": "Prueba",
+  "password": "$2b$10$f9T76pib3mI2WghS6l6Mo.IGdzLGUqcCPTBVIZdU4tkpsaOqYVl0q",
+  "email": "pturan@gmail.com",
+  "avatar": "1592251630125.jpg"
+ },
+ {
+  "id": 11,
+  "name": "Prueba",
+  "lastname": "Imagen",
+  "password": "$2b$10$jA2Eu88xIEJTGu8i/ixy8Ojmwwg6TUvXzV89KFBYZgF04zR4XDALS",
+  "email": "test@gmail.com",
+  "image": "1592253861098.jpg"
+ },
+ {
+  "id": 12,
+  "name": "Carlos",
+  "lastname": "Barerio",
+  "password": "$2b$10$AEEWGM3npKI4CcJa4ScbIeN6YrhyUN5xGyAk42XVshaGBc/Ze6TPu",
+  "email": "carlos@gmail.com",
+  "avatar": "1592254302437.jpg"
+ },
+ {
+  "id": 13,
+  "name": "Silvia",
+  "lastname": "Maisel",
+  "password": "$2b$10$XnDEsBU0U0kzJrR02/7n/u3kHA4ZBd2T6Jql5LARd0.L2msvz3a7u",
+  "email": "Sil10_2@fotmail.com",
+  "avatar": "1592681859871.jpg"
+ },
+ {
+  "id": 14,
+  "name": "Florencia",
+  "lastname": "Fernandez",
+  "password": "$2b$10$.mLu4EIUOvH3I2yDIurAkeRh54/DiyKxvfxsNwqOTDhsudGj/4jgq",
+  "email": "flor123@hotmail.com",
+  "avatar": "1592684822930.jpg"
+ },
+ {
+  "id": 15,
+  "name": "Alicia",
+  "lastname": "Carretero",
+  "password": "$2b$10$2Eaa77pB8rCfrXxRbghXE.2A1SdnRbEyzWmJq6MPztfUY7h9trFMi",
+  "email": "Alicia66@gmail.com",
+  "avatar": "1592798034075.jpg"
  }
 ]
