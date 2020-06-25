@@ -23,7 +23,19 @@
   <div class="basket"> 
     <button ><a href="/carrito">  <img width="60" height="60"alt="Carro" src="../images/Carrito.png"></a></button>
   </div>
+
+  <%  if (typeof sessions != 'undefined') { %>
+  
+    <div class="profile" id="profile"> 
+    <button ><a href="/users/profile">  <img width="60" height="60"alt="Usuario" src="../images/Usuario.jpg"></a></button>
+  </div>
+
+           
+       
+<% } %> 
+      
 </div>
+
 </header>
   <div class="page-heading">
     <h2><%= title %></h2>   

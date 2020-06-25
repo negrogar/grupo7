@@ -73,7 +73,13 @@ h2{
 
 .basket {
     position: absolute;
-	right: -40px;
+	right: -1px;
+	top: 20px;
+}
+
+.profile {
+	position: absolute;
+	right: -65px;
 	top: 20px;
 }
 

@@ -10,9 +10,14 @@ let ProdController = {
   
   newprod: function (req, res) {
 
+  		if (req.session.userlogged == undefined) {
 		res.render('CargaProd', { 
-    title: 'Alta de Producto'
-	})
+    title: 'Alta de Producto'    
+	}) } else {
+			res.render('CargaProd', { 
+    		title: 'Alta de Producto', 
+    		sessions: req.session.userlogged
+		})}
 	},
 
 	// Create -  Method to store

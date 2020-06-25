@@ -72,20 +72,40 @@ const controller = {
                 console.log(req.session.userlogged);
 
             if (req.body.recordar != undefined) {
-                res.cookie("recordar", userToLog.id, { maxAge: 240000})
-            }
+                res.cookie("recordar", userToLog.id, { maxAge: 120000})
+           }
             
-            res.render('perfil', {
+                   if (req.session.userlogged != undefined) {
+            return res.render('perfil' , {
                 title: 'Tu Perfil',
                 user: userToLog,
                 sessions: req.session.userlogged
             })
 
-        if (userToLog == undefined) {
-            return res.redirect('/users/login')
+            } else {
 
+
+            res.render('perfil', {
+                title: 'Tu Perfil',
+                user: userToLog,
+                sessions: req.session.userlogged
+            })
         }
-}
+
+  },
+
+    seeprofile: (req, res) => {
+            
+        if (req.session.userlogged != undefined) {
+               res.render('perfil', {
+                title: 'Tu Perfil',
+                user: req.session.userlogged,
+                sessions: req.session.userlogged
+            });
+        } else {
+            res.send('Aca no deberia porder entrar.')
+        }
+    }
 }
 
 module.exports = controller;

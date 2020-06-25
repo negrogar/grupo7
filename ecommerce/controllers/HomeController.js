@@ -19,6 +19,9 @@ const HomeController = (req, res) => {
     return individuo.categoria == 3
   });
 
+
+  if (req.session.userlogged == undefined) {
+      
   res.render('Home', { 
     title: 'Tienda',
     masVendidos: masVendidos,
@@ -26,6 +29,16 @@ const HomeController = (req, res) => {
     ultimosAgregados: ultimosAgregados,
     verduras: verduras
   });
+   } else {
+       res.render('Home', { 
+    title: 'Tienda',
+    masVendidos: masVendidos,
+    enOferta: enOferta,
+    ultimosAgregados: ultimosAgregados,
+    verduras: verduras,
+    sessions: req.session.userlogged
+  });
+   }
 };
 
 

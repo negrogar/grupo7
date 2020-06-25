@@ -112,5 +112,13 @@
   "password": "$2b$10$2Eaa77pB8rCfrXxRbghXE.2A1SdnRbEyzWmJq6MPztfUY7h9trFMi",
   "email": "Alicia66@gmail.com",
   "avatar": "1592798034075.jpg"
+ },
+ {
+  "id": 16,
+  "name": "Martin",
+  "lastname": "Gonzalez",
+  "password": "$2b$10$vFEoJiHSJCX58zJxZe9id.69Y.DpQbSWC4FA3/6HotuO7U5UNLq/G",
+  "email": "TinchoGonz@hotmail.com",
+  "avatar": "1592859653499.jpg"
  }
 ]

@@ -45,5 +45,7 @@ router.post('/create/', upload.any(), [
 router.get('/login/', guessMiddleware, usersController.login); /* GET - Form to create */
 router.post('/login/', usersController.validate); /* Post - Validation login */
 
+router.get('/profile/', usersController.seeprofile);
+
 
 module.exports = router;

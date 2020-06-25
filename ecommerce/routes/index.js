@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 const HomeController = require('../controllers/HomeController.js');
 const DetalleController = require('../controllers/DetalleController.js');
-const carritoController = require('../controllers/carritoController.js')
+const carritoController = require('../controllers/carritoController.js');
+//const profileMiddleware = require('../middlewares/profileMiddleware')
 
 /* GET home page. */
 
