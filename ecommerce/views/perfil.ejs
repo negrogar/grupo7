@@ -9,16 +9,21 @@
                 <div class="col-4"><img src="../avatar/<%=user.avatar%>" alt="fotoDePerfil" class="img-thumbnail">
                 </div>
                 <div class="col-6"><div class="alert alert-success" role="alert">
-                    <h4>Bienvenido a tu perfil <%=user.name%>!</h4>
+                    <h4>Bienvenido a tu perfil <%=user.ds_nombre%>!</h4>
                         <h5>Ingresos a tu perfil <%=sessions%></h4>
                   </div>
                 </div>
                 <div class="col-2">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="/carrito"> Tu Carrito</a></li>
-                        <li class="list-group-item"><a href="/Home"> Compras recientes</a></li>
-                        <li class="list-group-item"><a href="/Home"> Cerrar Sesion</a></li>
-
+                        <li class="list-group-item"><a href="/carrito">Tu Carrito</a></li>
+                        <li class="list-group-item"><a href="/Home">Ultimas Compras</a></li>
+                        <form action="/users/profile" method="POST">
+                        <select name="profile">
+                        <option value=1>Cerrar Sesion</option>
+                        <option value="noth">No hacer nada</option>
+                        <input type="submit" value="Confirmar">
+                        </select>
+                        </form>
                     </ul>
                 </div>
             </div>

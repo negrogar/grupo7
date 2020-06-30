@@ -1,0 +1,11 @@
+Revisar validaciones de carga, usuarios y productos.
+Cambiar boton de deslogueo de sesion en vista perfil.
+Crear vista para capturas de errores o cuando el usuario no tiene acceso a la ruta.
+Lógica de carrito y tabla en la base de datos. 
+Validaciones de JS en el front. 
+Implementar Bcrypt sobre la contraseña que viaja a la base. 
+Mejorar el HomePage agregando carruseles a los costados. 
+El navbar debe cambiar de color cuando scrolleas. 
+Habilitar mas campos para las descripciones de producto. 
+Agregar display "none" a algunos botones como eliminar o editar producto si usuario no esta logeado. 
+

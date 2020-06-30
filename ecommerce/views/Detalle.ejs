@@ -15,16 +15,16 @@
 					</div>
 
  					<div class="product-shop col-6">
-						<h1><%= verdura.nombre %></h1>
+						<h1><%= verdura.ds_nombre %></h1>
 
 						<div class="price-box price">
-							<span>$<%= verdura.precio %></span>
+							<span>$<%= verdura.dn_precio %></span>
 						</div>
 						<div>
 							<a class="editar" href="/prod/Prod/edit/<%= verdura.id %>"><span>Editar</span></a>
 						</div>
 						<div class="action">
-							<a class="button btn-cart" title='Añadir al carrito' data-quantity="1" data-product_id="7121" href='?add-to-cart=7121'>
+							<a class="button btn-cart" title='Añadir al carrito' data-quantity="1" data-product_id="7121" href='?add-to-cart/<%= verdura.id %>'>
 							  <span>Añadir al carrito </span>
 							</a>
 						</div>
@@ -42,6 +42,7 @@
 
 
   <div class="tab-description col-11">
+  	<h2><%= verdura.ds_descripcion %></h2>
     <h3>¿Que es?</h3>
 	<p>Es prima hermana del brócoli, la coliflor y de los repollitos de Bruselas.</p>
 	<p>Esta hortaliza vino a desbancar a la espinaca, con Popeye y todo, se está convirtiendo en la reina de los productos verdes.<br />

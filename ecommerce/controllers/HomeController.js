@@ -1,24 +1,36 @@
 const fs = require('fs');
 const path = require('path');
+let db = require('../database/models');
+let sequelize = db.sequelize;
 
-const HomeController = (req, res) => {
-  const pathVerduras = path.join(__dirname, '../data/db-vegetales.json');
-  const verduras = JSON.parse(fs.readFileSync(pathVerduras, 'utf-8'));
+// const pathVerduras = path.join(__dirname, '../data/db-vegetales.json');
+// const verduras = JSON.parse(fs.readFileSync(pathVerduras, 'utf-8'));
 
-  const masVendidos = verduras.filter((individuo) => {
-    return individuo.categoria == 1
+// console.log(verduras);
+
+const HomeController = {
+
+  
+  list: function(req, res) {
+    sequelize.query('SELECT * FROM productos')
+        .then(function(resultados) {
+            let  verduras = resultados[0];
+            
+            const masVendidos = verduras.filter((individuo) => {
+            return individuo.ds_categoria == 1
+            
   });
 
-
-
-  const enOferta = verduras.filter((individuo) => {
-    return individuo.categoria == 2
+            const enOferta = verduras.filter((individuo) => {
+            return individuo.ds_categoria == 2
   });
 
-  const ultimosAgregados = verduras.filter((individuo) => {
-    return individuo.categoria == 3
+            const ultimosAgregados = verduras.filter((individuo) => {
+            return individuo.ds_categoria == 3
   });
 
+  
+  
 
   if (req.session.userlogged == undefined) {
       
@@ -39,8 +51,9 @@ const HomeController = (req, res) => {
     sessions: req.session.userlogged
   });
    }
-};
+ });
+}
 
-
+}
 
 module.exports = HomeController;

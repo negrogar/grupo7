@@ -10,6 +10,19 @@
 	<div class="container products-wrapper">
 		<div class="col-12">
 			
+			
+			<% if (typeof errors != 'undefined') { %>
+					<p style="color: #00B7FF">ERROR</p>
+					<ul>
+						<% for (let i = 0; i < errors.length; i++) { %>
+							<li>
+								<%= errors[i].msg %>	
+							</li>
+					<% } %>
+					</ul>
+		<% } %>
+
+
 			<div class="alert alert-danger" role="alert">
 				
 			</div>

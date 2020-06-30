@@ -1,8 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require('bcrypt');
+let db = require('../database/models');
+let sequelize = db.sequelize;
 
-const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+//const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
+//const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 function cookieMiddleware (req, res, next) {
  
@@ -13,16 +16,19 @@ function cookieMiddleware (req, res, next) {
 
 	 	let userToLog
 
-        for (let i = 0; i < users.length; i++) {
-            if (users[i].email == req.cookie.email) {
-                    userToLog = users[i]; 
+            sequelize.query('SELECT * FROM usuarios')
+                .then(function(resultados) {
+                    let usuario = resultados[0];
+                    for (let i = 0; i < usuario.length; i++) {
+                        if (usuario[i].ds_email == req.body.email &&
+                        usuario[i].ds_password == req.body.password) {
+                        userToLog = usuario[i];
                     break;
-            }
-        }  
-
-        req.session.userlogged = userToLog;
+                }     
+            } 
+        });    
  
-        }
+    }
 }
 
 module.exports = cookieMiddleware;

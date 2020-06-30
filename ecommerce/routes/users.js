@@ -4,6 +4,7 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+const bcrypt = require('bcrypt');
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); 
 
@@ -43,9 +44,15 @@ router.post('/create/', upload.any(), [
 	], usersController.store); /* POST - Store in DB */
 
 router.get('/login/', guessMiddleware, usersController.login); /* GET - Form to create */
-router.post('/login/', usersController.validate); /* Post - Validation login */
+router.post('/login/', [
+        
+        check('email').isEmail().withMessage('Ingrese su credenciales correctamente'),
+        check('password').isLength({min: 5}).withMessage('Ingrese su contraseña'),
+       
+
+    ], usersController.validate); /* Post - Validation login */
 
 router.get('/profile/', usersController.seeprofile);
-
+router.post('/profile/', usersController.close);
 
 module.exports = router;

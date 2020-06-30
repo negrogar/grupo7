@@ -7,7 +7,7 @@ const carritoController = require('../controllers/carritoController.js');
 
 /* GET home page. */
 
-router.get('/Home', HomeController);
+router.get('/Home', HomeController.list);
 router.get('/Detalle/:id', DetalleController.detalle);
 router.get('/carrito', carritoController);
 

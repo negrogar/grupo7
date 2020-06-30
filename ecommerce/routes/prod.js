@@ -8,6 +8,9 @@ const path = require('path');
 const ProdController = require('../controllers/ProdController');
 const guessMiddleware = require("../middlewares/guessMiddleware");
 const usersMiddleware = require("../middlewares/usersMiddleware");
+// const profileMiddleware = require("../middlewares/profileMiddleware");
+
+let { check, validationResult, body } = require('express-validator');
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -24,7 +27,14 @@ router.get('/Prod', usersMiddleware, ProdController.newprod); /* GET - All produ
 
 /*** CREATE ONE PRODUCT ***/ 
 //router.get('/create/', ProdController.create); /* GET - Form to create */
-router.post('/Prod', upload.any(), ProdController.store); /* POST - Store in DB */
+router.post('/Prod', upload.any(), [
+
+		check('nombre').isLength({min: 1}).withMessage('Debe indicar el nombre del producto'),
+		check('precio').isLength({min: 1}).withMessage('Debe especificar un precio'),
+		check('categoria').isLength({min: 1}).withMessage('Elegi una categoria'),
+		check('descripcion').isLength({min: 1}).withMessage('Incluya una descripcion')
+
+	], ProdController.store); /* POST - Store in DB */
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/Prod/edit/:id', usersMiddleware, ProdController.edit); /* GET - Form to create */

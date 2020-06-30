@@ -12,6 +12,17 @@
 			</div>
 		</div>
 		<div class="col-12">
+
+		<% if (typeof errors != 'undefined') { %>
+					<p style="color: #00B7FF">ERROR</p>
+					<ul>
+						<% for (let i = 0; i < errors.length; i++) { %>
+							<li>
+								<%= errors[i].msg %>	
+							</li>
+					<% } %>
+					</ul>
+		<% } %>
 			<form action="/prod/Prod" method="POST" enctype="multipart/form-data">
 				<div class="row product-detail">
 					<div class="form-group col-12 col-md-6">
@@ -30,8 +41,8 @@
 						<label for="category" class="form-label">Categoría:</label>
 						<select name="categoria" id="category" class="form-control">
 							<option value="">Elegí</option>
-							<option value="in-sale">En oferta</option>
-							<option value="visited">Últimos agregados</option>
+							<option value= 2>En oferta</option>
+							<option value= 3>Últimos agregados</option>
 						</select>
 					</div>
 					<div class="col-12 col-md-6">
