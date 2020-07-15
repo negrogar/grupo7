@@ -1,5 +1,8 @@
 <%- include('partials/header'); %>
 
+
+
+
 <body>
   
   <%- include('partials/header-navbar'); %>     
@@ -7,9 +10,21 @@
 
 <!--PRDDUCTS SECTION -->
 
+<!-- Prueba de un buscador -->
+
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+<!-- Prueba de un buscador -->
 <section>
+
+
   <div class="container products-wrapper"> 
-  <h2 class="prod-category"> Los mas vendidos </h2> 
+  <h3 class="prod-category"> Los mas vendidos </h3> 
     <div class="row">
       <% for (producto of masVendidos) { %>  
       <div class="col-12 col-sm-6 col-lg-3">      
@@ -27,11 +42,10 @@
                   <a> $<%= producto.dn_precio %> </a> 
               </div>
             </div>         
-            <div class="action" style="margin-left: auto; margin-right: auto;">
-              <a class="button btn-cart" title='Añadir al carrito' data-quantity="1" data-product_id="7121" href='?add-to-card/<%= producto.id %>'>
-                <span>Añadir al carrito </span>
-              </a>
-            </div>
+          <div>
+              <button id="bprimary" value="Añadir a Carrito" quantity="1" image="<%= producto.image %>" precio="<%= producto.dn_precio %>" nombre="<%= producto.ds_nombre %>" product_id="<%= producto.id %>" name="anadir" onclick="micarrito(this)">Añadir a Carrito</button>
+          </div>  
+          
           </div>
       </div>
       <% } %>
@@ -63,11 +77,10 @@
                 <a> $<%= producto.dn_precio %> </a> 
               </div>
             </div>         
-            <div class="action">
-              <a class="button btn-cart" title='Añadir al carrito' data-quantity="1" data-product_id="7121" href='?add-to-cart/<%= producto.id %>'>
-                <span>Añadir al carrito </span>
-              </a>
-            </div>
+          <div>
+              <button id="bprimary" value="Añadir a Carrito" quantity="1" image="<%= producto.image %>" precio="<%= producto.dn_precio %>" nombre="<%= producto.ds_nombre %>" product_id="<%= producto.id %>" name="anadir" onclick="micarrito(this)">Añadir a Carrito</button>
+          </div>  
+
           </div>
       </div>
       <% } %>
@@ -102,21 +115,22 @@
                 <a> $<%= producto.dn_precio %> </a> 
               </div>
             </div>         
-            <div class="action">
-              <a class="button btn-cart" title='Añadir al carrito' data-quantity="1" data-product_id="7121" href='?add-to-cart/<%= producto.id %>'>
-                <span>Añadir al carrito </span>
-              </a>
-            </div>
+           
+          <div>
+              <button id="bprimary" value="Añadir a Carrito" quantity="1" image="<%= producto.image %>" precio="<%= producto.dn_precio %>" nombre="<%= producto.ds_nombre %>" product_id="<%= producto.id %>" name="anadir" onclick="micarrito(this)">Añadir a Carrito</button>
+          </div>  
+            
           </div>
       </div>
       <% } %>
   </div> 
-  </div>
-</section>
+  </div> 
+
 
 <!-- ================= END OF SECTION ULTIMOS AGREGADOS ============================ -->
 
-
+<!-- ================= JAVASCRIPTS      ============================ -->
+<script type="text/javascript" src="/javascripts/carritoFunction.js"></script>
 
 <!-- ================= BEGIN OF PRE-FOOTER ========================= -->
 

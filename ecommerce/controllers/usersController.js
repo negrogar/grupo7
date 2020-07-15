@@ -25,7 +25,7 @@ const controller = {
             ds_nombre: req.body.name,
             ds_apellido: req.body.lastname,
             ds_email: req.body.email,
-            ds_password: req.body.password,
+            ds_password: bcrypt.hashSync(req.body.password, 10),
             avatar: req.files[0].filename
         });
 
@@ -64,27 +64,27 @@ const controller = {
 
     validate: (req, res) => {
 
-        let userToLog
+        let userlogged
 
         let errors = validationResult(req);
 
+
         if (errors.isEmpty()) {
 
-            sequelize.query('SELECT * FROM usuarios')
+            sequelize.query('SELECT * FROM Usuarios')
                 .then(function(resultados) {
                     let usuario = resultados[0];
                     for (let i = 0; i < usuario.length; i++) {
                         if (usuario[i].ds_email == req.body.email) {
                             if (usuario[i].ds_password == req.body.password) {
-                                userToLog = usuario[i];
-                        
-                    break;
-                }     
+                                userlogged = usuario[i];
+                    break;    
+                  }     
             }
-        } 
-                
-            req.session.user = userToLog;
-            console.log(req.session.user);
+        }  
+
+
+            req.session.user = userlogged; 
 
             if (req.session.userlogged == undefined) {
                 req.session.userlogged = 0;
@@ -94,15 +94,15 @@ const controller = {
             if (req.body.recordar != undefined) {
                 res.cookie("recordar", userToLog.id, { maxAge: 120000})
            }
-                 
-
-            res.render('perfil', {
-                title: 'Tu Perfil',
-                user: userToLog,
-                sessions: req.session.userlogged
-            })
-            }) 
          
+           
+                res.render('perfil', {
+                title: 'Tu Perfil',
+                user: userlogged,
+                sessions: req.session.userlogged
+            }) 
+          }) 
+
         }  else {
             res.render('Login', {
             title: 'Login',
@@ -117,9 +117,10 @@ const controller = {
         if (req.session.userlogged != undefined) {
                res.render('perfil', {
                 title: 'Tu Perfil',
-                user: req.session.userlogged,
+                user: req.session.user,
                 sessions: req.session.userlogged
             });
+
         } else {
             res.send('Aca no deberia porder entrar.')
         }

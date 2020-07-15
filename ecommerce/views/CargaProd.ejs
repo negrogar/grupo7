@@ -23,8 +23,8 @@
 					<% } %>
 					</ul>
 		<% } %>
-			<form action="/prod/Prod" method="POST" enctype="multipart/form-data">
-				<div class="row product-detail">
+			<form action="/prod/Prod" class="row product-detail" method="POST" enctype="multipart/form-data">
+				<div>
 					<div class="form-group col-12 col-md-6">
 						<label for="name" class="form-label">Vegetal:</label>
 						<input type="text" id="name" name="nombre" placeholder="Ej: Zapallo" class="form-control">
@@ -47,21 +47,23 @@
 					</div>
 					<div class="col-12 col-md-6">
 						<label for="productoImagen" class="form-label">Imagen del producto:</label>
-						<input type="file" name="productoImagen" id="productoImagen">
+						<input type="file" class="form-control" name="productoImagen" id="productoImagen">
 					</div>
 					<div class="form-group col-12">
 						<label for="description" class="form-label">Descipción:</label>
 						<textarea name="descripcion" id="description" class="form-control"></textarea>
 					</div>
 					<div class="col-12">
-						<form action="" method="POST">
 							<button type="submit" class="btn btn-success">Guardar</button>
-						</form>
+						
 					</div>
 				</div>
 			</form>
 		</div>
 
     </div>
-    
+
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="/javascripts/prodFormValidation.js"></script>
 <%- include('partials/footer'); %>

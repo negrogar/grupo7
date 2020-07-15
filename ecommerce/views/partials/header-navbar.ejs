@@ -12,22 +12,20 @@
 	</div>
 
 
-<!-- EN LOS SRC DEBEMOS PONER LOS VINCULOS A LAS OTRAS PAGINAS -->
-
-
 <div class="nav"> 
   <div class="nav-menu"> <a href="/users/create"><p>REGISTRATE</p></a> </div>
   <div class="nav-menu"><a href="/users/login"> <p>MI CUENTA</p></a> </div>
   <div class="nav-menu"><a href=""> <p>OFERTAS</p></a> </div>
   <div class="nav-menu"><a href="/prod/Prod"><p>ALTAS</p></a> </div>
+
   <div class="basket"> 
-    <button ><a href="/carrito">  <img width="60" height="60"alt="Carro" src="../images/Carrito.png"></a></button>
+    <button> <a href="/carrito/comprar">  <img width="60" height="60"alt="Carro" src="../images/Carrito.png"></a></button>
   </div>
 
   <%  if (typeof sessions != 'undefined') { %>
   
     <div class="profile" id="profile"> 
-    <button ><a href="/users/profile">  <img width="60" height="60"alt="Usuario" src="../images/Usuario.jpg"></a></button>
+    <button><a href="/users/profile">  <img width="60" height="60"alt="Usuario" src="../images/Usuario.jpg"></a></button>
   </div>
 
            
@@ -36,8 +34,11 @@
       
 </div>
 
+
+
 </header>
   <div class="page-heading">
     <h2><%= title %></h2>   
   </div>
 
+<script src="/javascripts/homeEffects.js"></script>

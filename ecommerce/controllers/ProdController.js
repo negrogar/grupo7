@@ -21,7 +21,7 @@ let ProdController = {
     		title: 'Alta de Producto', 
     		sessions: req.session.userlogged
 		})}
-		console.log(req.session.userlogged)
+		console.log(req.session.user)
 	},
 
 	// Create -  Method to store

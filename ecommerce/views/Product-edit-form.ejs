@@ -29,7 +29,7 @@
 
 					<div class="form-group col-6">
 						<label for="categoria" class="form-label">Categoría:</label>
-						<select name="categoria" id="categoria" class="form-control">
+						<select name="categoria" id="category" class="form-control">
 							
 							<option value= 1 <%= productToEdit.ds_categoria == 1 ? 'selected' : null %>>
 								Mas Vendidos
@@ -71,6 +71,10 @@
 
 </section>
 	<!-- /todos los productos -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="/javascripts/prodEditFormValidation.js"></script>
+
+</body>
 
 	<!-- footer -->
 	<%- include('partials/footer') %>

@@ -23,11 +23,9 @@
 						<div>
 							<a class="editar" href="/prod/Prod/edit/<%= verdura.id %>"><span>Editar</span></a>
 						</div>
-						<div class="action">
-							<a class="button btn-cart" title='Añadir al carrito' data-quantity="1" data-product_id="7121" href='?add-to-cart/<%= verdura.id %>'>
-							  <span>Añadir al carrito </span>
-							</a>
-						</div>
+					   <div>
+              <button id="bprimary" value="Añadir a Carrito" quantity=1 image="<%= verdura.image %>" precio="<%= verdura.dn_precio %>" nombre="<%= verdura.ds_nombre %>" product_id="<%= verdura.id %>" name="anadir" onclick="micarrito(this)">Añadir a Carrito</button>
+          </div>  
 						<br>
 						<div>
 							<form action="/prod/Prod/delete/<%= verdura.id %>?_method=DELETE" method="POST">
@@ -61,5 +59,7 @@
 			</ul>
 </div>
 
+
+<script type="text/javascript" src="/javascripts/carritoFunction.js"></script>
 
 <%- include('partials/footer'); %>

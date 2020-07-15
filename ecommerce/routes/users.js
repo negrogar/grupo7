@@ -7,6 +7,8 @@ const fs = require('fs');
 const bcrypt = require('bcrypt');
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); 
+let db = require('../database/models');
+let sequelize = db.sequelize;
 
 // ************ Controller Require ************
 const usersController = require('../controllers/usersController');
@@ -32,13 +34,13 @@ router.post('/create/', upload.any(), [
 		check('lastname').isLength().withMessage('Este campo debe estar completo'),
 		check('email').isEmail().withMessage('Este campo debe ser un mail valido'),
 		check('password').isLength({min: 5}).withMessage('Minimo de 5 caracteres alfanumericos'),
-        body('email').custom(function(value) {
-            for (let i = 0; i < users.length; i++) {
-                if (users[i].email == value) {
-                    return false;
+        body('email').custom(async function(value) {
+
+            const user = await db.Usuarios.findAll({ where: {ds_email:value}});
+                if (user.length > 0) {
+                    return Promise.reject();
                 }
-            }
-            return true;
+
         }).withMessage('Usuario ya existente')
 
 	], usersController.store); /* POST - Store in DB */

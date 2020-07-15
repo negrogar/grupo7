@@ -9,7 +9,7 @@ header {
 	z-index: 100;
 }
 
-h2{
+h2 {
 	text-align: center;
 	padding: auto;
 }
@@ -38,30 +38,37 @@ h2{
 .header-container {
 	transition: all 0.5s;
 	position: relative;
-	background: rgba(255,255,255, 0.2);
+	background: transparent rgba(255,255,255, 0.2);
 }
 
 .nav {
 	position: fixed;
 	width: 95%;
-	text-align: center;	
+	text-align: center;
 }
 
 
 .nav-menu {	
 	position: relative;
 	width: 20%;
+	height: 25px;
 	margin-top: -30px;
 	font-weight: bold;
 	font-size: 15px;
 	float: left;
 	margin-left: auto;
+	background-color: blue !important;
+
 }
 
+.nav-menu.scrolled {
+	background-color: red !important;
+}
+/*
 .nav-menu a{
 	color: rgb(133, 124, 124);
 }
-
+/*
 .nav-menu > div:hover > p,  div > a:hover {
 	color: #fff;
 	-webkit-transition: all 0.3s cubic-bezier(0.8, 0, 0, 1);
@@ -70,7 +77,7 @@ h2{
 	color: inset 0 -60px 0 0 #222;
 	color: inset 0 -75px 0 0 #202020;
 }
-
+*/
 .basket {
     position: absolute;
 	right: -1px;
@@ -116,6 +123,12 @@ body {
 	text-decoration: underline;
 }
 
+.quantity-sel {
+	display: block;
+	font-size: 40px;
+	font-size: 40px;
+}
+
 .product-shop{
 	margin: auto;
 }
@@ -133,13 +146,7 @@ body {
 	margin-left: 20px;
 }
 
-button {
-    display: inline-block;    
-    padding: 0;
-    margin: 0;
-    vertical-align: top;
-   
-}
+
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -175,7 +182,7 @@ small {
 
 /* ======================================================================================= */
 /* ======================================================================================= */
-/* ================= BEGIN OF PRE-FOOTER ========================= */
+/* ================= BEGIN OF PRE-FOOTER ========================= 
 our-features-box .container{ padding:0px
 }
 .our-features-box ul {
@@ -237,7 +244,7 @@ our-features-box .container{ padding:0px
 }
 
 
-
+*/
 
 /* ========================= BEGIN FOOTER ================================================-*/
 
@@ -309,7 +316,17 @@ footer {
 /* =================== END FOOTER =================================== */
 
 
-/* =================== BEGIN EFFECTS BTN ============================ */
+#bprimary {
+	padding: 5px 20px;
+	margin: 5px;
+	color: #FFFFFF;
+	background-color: green; 
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+/* =================== BEGIN EFFECTS BTN ============================
 
 
 button.button {
@@ -373,7 +390,7 @@ display: inline-block;
 	font-weight:normal
 }
 
-/* CSS Del Formulario */
+ CSS Del Formulario */
 
 .products-wrapper{
 	text-align: center;

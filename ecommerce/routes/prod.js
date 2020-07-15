@@ -27,14 +27,15 @@ router.get('/Prod', usersMiddleware, ProdController.newprod); /* GET - All produ
 
 /*** CREATE ONE PRODUCT ***/ 
 //router.get('/create/', ProdController.create); /* GET - Form to create */
-router.post('/Prod', upload.any(), [
+router.post('/Prod', upload.any(), 
+    /*[
 
 		check('nombre').isLength({min: 1}).withMessage('Debe indicar el nombre del producto'),
 		check('precio').isLength({min: 1}).withMessage('Debe especificar un precio'),
 		check('categoria').isLength({min: 1}).withMessage('Elegi una categoria'),
 		check('descripcion').isLength({min: 1}).withMessage('Incluya una descripcion')
 
-	], ProdController.store); /* POST - Store in DB */
+	],*/ ProdController.store); /* POST - Store in DB */
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/Prod/edit/:id', usersMiddleware, ProdController.edit); /* GET - Form to create */

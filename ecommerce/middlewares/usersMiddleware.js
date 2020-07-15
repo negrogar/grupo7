@@ -2,7 +2,9 @@ var usersMiddleware = (req, res, next) => {
   if (req.session.userlogged != undefined) {
   	 next();
   	} else {
-  		res.send("Esta pagina es solo para Usuarios")
+  		res.render("Restrinct", {
+  			title: "NO PUEDES ACCEDER"
+  		})
   	}
  
 };
