@@ -68,7 +68,7 @@ let ProdController = {
 		console.log(finalProductos);
 		fs.writeFileSync(productosFilePath, JSON.stringify(finalProductos, null, ' '));
 */
-		res.send('Listo ya esta agregado');
+		res.redirect('/Home');
 
 	} else {
 		res.render('CargaProd', {
@@ -151,7 +151,7 @@ let ProdController = {
 			}
 		});
 			
-		res.send('Editaste con exito, ver en HomePage');
+		res.redirect('/Home');
 	},
 
 		// Delete - Delete one product from DB

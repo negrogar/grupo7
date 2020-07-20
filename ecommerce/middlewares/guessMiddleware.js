@@ -2,8 +2,8 @@ var guessMiddleware = (req, res, next) => {
   if (req.session.userlogged == undefined) {
   	 next();
   	} else {
-  		res.render("Restrinct", {
-  			title: "NO PUEDES ACCEDER"
+  		res.render("restrinctLogged", {
+  			title: "Algo salió mal!"
   		})
   	}
  

@@ -35,6 +35,6 @@ function SaveDataToSessionStorage(data)
 var botonescarrito = document.querySelectorAll("#bprimary");
     for (const boton of botonescarrito) {
         boton.addEventListener('click', function() {
-        boton.style.backgroundColor = 'red';  
+        boton.style.backgroundColor = '#356300';  
     })
 }

@@ -1,18 +1,9 @@
 Agregar mas validacion con javascript.
-Cambiar boton de deslogueo de sesion en vista perfil.
-Mejorar vista para capturas de errores o cuando el usuario no tiene acceso a la ruta.
-
 ** Funcion Carrito **
 	Ver error de cantidades que no guarda en la base.
 	Boton de eliminar producto por id.
 	Sweet Alert de confirmar compra.
-	Sweet Alert de vaciar carrito. 
-
-  
-Mejorar el HomePage agregando carruseles a los costados. 
-El navbar debe cambiar de color cuando scrolleas. 
-Habilitar mas campos para las descripciones de producto. 
-Agregar display "none" a algunos botones como eliminar o editar producto si usuario no esta logeado. 
+	Sweet Alert de vaciar carrito.   
 Agregar pantalla de editar usuario.
 
 
