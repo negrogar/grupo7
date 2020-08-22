@@ -194,27 +194,45 @@ class Carrito {
 
 
         eliminarProducto(e){
-   
         e.preventDefault();
-    /*    
-        let productos
-        productos = this.obtenerProductosLocalStorage();
+        let productos = this.obtenerProductosLocalStorage(); 
+      /*  for (const producto of productos) {
+            let id = producto.id
+            console.log(id);
+        } */
+            
+            if(e.target.classList.contains('borrar-producto')){
+            e.target.parentElement.parentElement.remove();
+}
+
+        let productosvalor = document.querySelectorAll('.borrar-producto')
+            for (const producto of productosvalor) {
+               console.log(producto.getAttribute("data-id"))
+            }
+         //productosvalor.forEach(function(producto, index) {
+            
+            //console.log(producto[0].getAttribute("data-id")) 
+         //})
+/*
+             const productosresultantes = productos.filter((individuo) => {
+         
+            return individuo.id != producto.getAttribute("data-id");
+}
+
+
+            
         
-        if(e.target.classList.contains('borrar-producto')){
-            productos.forEach(function(producto){
-            e.target.parentElement.parentElement.remove();             
-            producto = e.target.parentElement.parentElement;
-            productoID = producto.id;
-            })  
-        }
+
         this.eliminarProductoLocalStorage(productoID);
- */
+ 
+        sessionStorage.setItem('session', JSON.stringify(productosresultantes))
+  */
         this.calcularTotal();
 }
 
 
     //Eliminar producto por ID del LS
-    eliminarProductoLocalStorage(){
+    eliminarProductoLocalStorage(productoID){
         let productosLS;
         //Obtenemos el arreglo de productos
         productosLS = this.obtenerProductosLocalStorage();
@@ -230,8 +248,7 @@ class Carrito {
         sessionStorage.setItem('session', JSON.stringify(productosLS));
     }
 
-        //Elimina todos los productos
-   
+    //Elimina todos los productos
     vaciarCarrito(e){
         e.preventDefault();
         Swal.fire({
@@ -328,28 +345,9 @@ class Carrito {
 
 }
 
-    //function sendToServer() {
    
     document.getElementById("datas").value = sessionStorage.getItem('session');
-    console.log(document.getElementById("datas").value);
-
-        /*let settings = {
-        "method": "POST",
-        "body": JSON.stringify(purchase)
-    }
-    fetch('http://localhost:3000/carrito/comprar/conf', settings)   
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(info) {
-            conssole.log(info)
-        })
-       .catch(function(e) {
-        console.log("Error! " + e);
-        })  
-
-}*/
-
+    //console.log(document.getElementById("datas").value);
 
 
 const compra = new Carrito();

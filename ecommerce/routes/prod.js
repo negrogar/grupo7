@@ -25,10 +25,8 @@ const upload = multer({ storage: storage })
 /*===============================================*/
 
 router.get('/Prod', usersMiddleware, ProdController.newprod); /* GET - All products */
-//router.get('/detail/:productId/', ProdController.detail); /* GET - Product detail */
 
 /*** CREATE ONE PRODUCT ***/ 
-//router.get('/create/', ProdController.create); /* GET - Form to create */
 router.post('/Prod', upload.any(), 
     /*[
 

@@ -42,8 +42,8 @@ h2 {
 
 
 .assetBlock {
+	position: fixed;
 	height: 45px;
-	font-family: "Verdana", sans-serif;
 	color: rgb(255,255,255);
 	font-size: 15px;
 	text-align: center;
@@ -51,28 +51,17 @@ h2 {
 }
 
 
-.header-container {
-	transition: all 0.5s;
-	position: relative;
-	background: transparent rgba(255,255,255, 0.2);
-}
-
-.nav {
+.navbar {
 	position: fixed;
-	width: 95%;
+	width: 100%;
 	text-align: center;
 }
 
 
 .nav-menu {	
-	position: relative;
 	width: 20%;
 	height: 25px;
-	margin-top: -30px;
-	font-size: 15px;
 	float: left;
-	margin-left: auto;
-	border-radius: 10px;
 }
 
 .nav-menu.scrolled {
@@ -93,9 +82,9 @@ h2 {
 }
 
 .basket {
-    position: absolute;
-	right: -1px;
-	top: 20px;
+    position: fixed;
+	right: -2px;
+	top: 60px;
 	
 }
 
@@ -121,9 +110,9 @@ h2 {
 }
 
 .profile {
-	position: absolute;
-	right: -65px;
-	top: 20px;
+	position: fixed;
+	right: 100px;
+	top: 60px;
 }
 
 .logo { 
@@ -142,6 +131,7 @@ body {
 	font-size: 300px;
 	padding: 0;
 	margin: auto;
+	margin-bottom: 0;
 	line-height: 1.55;
 	background-color: rgb(207, 207, 207);
 }
@@ -214,72 +204,6 @@ small {
 
 
 
-/* ======================================================================================= */
-/* ======================================================================================= */
-/* ================= BEGIN OF PRE-FOOTER ========================= 
-our-features-box .container{ padding:0px
-}
-.our-features-box ul {
-    list-style: none;
-    margin: auto;
-    padding: 0;
-    border: none;
-    padding:50px 0px;
-    overflow: hidden
-}
-.our-features-box li {
-    float: left;
-    margin-bottom: 0px;
-    text-align: center;
-    width: 25.5%;
-    padding: 0;
-    display: inline-block;
-}
-.our-features-box li.last {
-    margin-right: 0;
-    width: 23.5%
-}
-.our-features-box li.last .our-features-box .feature-box {margin-right:0px!important}
-.our-features-box .feature-box {
-    overflow: hidden;
-    font-size: 16px;
-    text-align: center;
-    color: #fff;
-    line-height: 1.4em;
-    font-weight: normal;
-    font-family: 'Montserrat', sans-serif;
-    margin-right: 15px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-radius:3px;
-    padding:25px
-}
-.free-shipping{ background:#94d7fb; color: #fff; }
-.need-help{ background:#685c88; color: #fff; }
-.money-back{ background:#fc9cc4; color: #fff; }
-.return-policy{ background:#dc4720; color: #fff;margin-right: 0!important; }
-.our-features-box .feature-box .content {
-  display: block;
-  text-align: left;
-  margin-left: 50px;
-  border-left: 1px rgba(255,255,255, 0.5) solid;
-  padding-left: 15px;
-}
-.our-features-box .feature-box span {
-    font-size: 12px;
-    display: block;
-    font-weight: 400;
-    text-transform: none;
-    display: block;
-    padding-top: 5px;
-    color: #fff;
-    line-height: 18px;
-    font-style: italic;
-}
-
-
-*/
-
 /* ========================= BEGIN FOOTER ================================================-*/
 
 
@@ -336,6 +260,7 @@ footer {
 	text-align: center;
 	font-size: 10px;
 	color: rgb(0,0,0);
+	margin: 0;
 }
 
 
@@ -355,66 +280,7 @@ footer {
 /* =================== BEGIN EFFECTS BTN ============================
 
 
-button.button {
-	display: inline-block;
-	border: 0;
-	background: #fff;
-	padding: 8px 10px;
-	font-size: 12px;
-	text-align: center;
-	white-space: nowrap;
-	font-weight: bold;
-	border: 1px solid #666;
-	line-height: 1.6em!important;
-}
-button.button:hover {
-    -webkit-transition: all 0.4s cubic-bezier(0.8, 0, 0, 1);
-    -o-transition: all 0.4s cubic-bezier(0.8, 0, 0, 1);
-    transition: all 0.4s cubic-bezier(0.8, 0, 0, 1);
-    box-shadow: inset 0 -45px 0 0 #ed6663;
-    border: 2px solid #e0403d;
-    color: #fff;
-}
 
-.btn-cart{
-display: inline-block;
-    border: 0;
-    background: #fff!important;
-    padding: 0px!important;
-    font-size: 12px;
-    text-align: center;
-    white-space: nowrap;
-    font-weight: normal;
-    border: 2px #88be4c solid!important;
-    -webkit-transition: all 0.4s cubic-bezier(0.8, 0, 0, 1);
-    -o-transition: all 0.4s cubic-bezier(0.8, 0, 0, 1);
-    transition: all 0.4s cubic-bezier(0.8, 0, 0, 1);
-    box-shadow: inset 0 0 0 0 #fff;
-	width:auto!important;
-	border-radius:0px!important}
-	
-.btn-cart:before {
-    content: '➡';
-    font-family: FontAwesome;
-    background: #88be4c;
-    color: #fff;
-    font-size: 16px;
-    padding:6px 15px 6px 15px;
-    display: inline-block;
-	vertical-align: middle;
-	line-height:1.3em
-}	
-
-.btn-cart span {
-    font-weight: bold!important;
-    font-size: 12px!important;
-    text-transform: uppercase!important;
-    color: #333;
-    display: inline-block;
-    padding: 0px 15px;
-	vertical-align: middle;
-	font-weight:normal
-}
 
  CSS Del Formulario */
 

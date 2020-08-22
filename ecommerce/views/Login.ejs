@@ -12,10 +12,10 @@
 			
 			
 			<% if (typeof errors != 'undefined') { %>
-					<p style="color: #00B7FF">ERROR</p>
+					<p style="color: #ce354f ">ERROR</p>
 					<ul>
 						<% for (let i = 0; i < errors.length; i++) { %>
-							<li>
+							<li style = "list-style: none;">
 								<%= errors[i].msg %>	
 							</li>
 					<% } %>

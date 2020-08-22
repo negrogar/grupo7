@@ -1,34 +1,33 @@
 <header> 
 
-  <div class="assetBlock" >
-    <p>Simple, fresco y online.</p>
+  <div class="container-fluid assetBlock" >
+    <p style="margin: 0;">Simple, fresco y online.</p>
+    <div class="col-3 nav-menu"> <a href="/users/create"><p>REGISTRATE</p></a> </div>
+    <div class="col-3 nav-menu"><a href="/users/login"> <p>LOGIN</p></a> </div>
+    <div class="col-3 nav-menu"><a href="http://localhost:3000/"> <p>DASHBOARD</p></a> </div>
+    <div class="col-3 nav-menu"><a href="/prod/Prod"><p>ALTAS</p></a> </div>
   </div>
-  <div class='header-inner'>
-    <div class="header-container"><div>     
-  </div>
+  <br><br>
+
   <div class="logo">
     <a href="/Home">
 		<img alt="Digital House" height="125"  src="../images/VerduLogo.jpg"></a>
 	</div>
 
 
-  <div class="nav"> 
-      <div class="nav-menu"> <a href="/users/create"><p>REGISTRATE</p></a> </div>
-      <div class="nav-menu"><a href="/users/login"> <p>LOGIN</p></a> </div>
-      <div class="nav-menu"><a href=""> <p>OFERTAS</p></a> </div>
-      <div class="nav-menu"><a href="/prod/Prod"><p>ALTAS</p></a> </div>
-
+  <div class="nav">
+    <!--NO BORRAR ESTA ETIQUETA-->
+  </div>
     <div class="basket"> 
       <button class="boton-carrito"> <a href="/carrito/comprar">  <img width="60" height="60"alt="Carro" src="../images/shopping-cart.png"></a></button>
     </div>
-
     <%  if (typeof sessions != 'undefined') { %>
     
       <div class="profile" id="profile"> 
         <button class="boton-usuario"><a href="/users/profile">  <img width="60" height="60"alt="Usuario" src="../images/login.png"></a></button>
       </div>
     <% } %> 
-  </div>
+
 
 
 

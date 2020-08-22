@@ -3,11 +3,6 @@ const path = require('path');
 let db = require('../database/models');
 let sequelize = db.sequelize;
 
-// const pathVerduras = path.join(__dirname, '../data/db-vegetales.json');
-// const verduras = JSON.parse(fs.readFileSync(pathVerduras, 'utf-8'));
-
-// console.log(verduras);
-
 const HomeController = {
 
   
@@ -18,16 +13,15 @@ const HomeController = {
             
             const masVendidos = verduras.filter((individuo) => {
             return individuo.ds_categoria == 1
-            
-  });
+            });
 
             const enOferta = verduras.filter((individuo) => {
             return individuo.ds_categoria == 2
-  });
+            });
 
             const ultimosAgregados = verduras.filter((individuo) => {
             return individuo.ds_categoria == 3
-  });
+            });
 
   
   

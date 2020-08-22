@@ -8,6 +8,7 @@ var session = require('express-session');
 var indexRouter = require('./routes/index');
 var prodRouter = require('./routes/prod');
 var usersRouter = require('./routes/users');
+var apiRouter = require('./routes/api');
 var cookieMiddleware = require('./middlewares/cookieMiddleware');
 const ejsLint = require('ejs-lint');
 var app = express();
@@ -32,6 +33,7 @@ app.use(session({
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/prod', prodRouter);
+app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

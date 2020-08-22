@@ -3,17 +3,17 @@
 
 <body>
     <%- include('partials/header-navbar'); %>
-        
+        <br>
         <div class="container">
             <div class="row">
                 <div class="col-4"> <img src="../avatar/<%=user.avatar%>" alt="fotoDePerfil" class="img-thumbnail">
                 </div>
-                <div class="col-6"><div class="alert alert-success" role="alert">
+                <div class="col-5"><div class="alert alert-success" role="alert">
                     <h4>Bienvenido a tu perfil <%=user.ds_nombre%>!</h4>
                         <h5>Ingresos a tu perfil: <%=sessions%></h4>
                   </div>
                 </div>
-                <div class="col-2">
+                <div class="col-3">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><a href="/carrito">Tu Carrito</a></li>
                         <li class="list-group-item"><a href="/Home">Ultimas Compras</a></li>
@@ -21,19 +21,12 @@
                             <button class="boton-cerrarSesion" name="profile" value="1" type="submit">
                                 Cerrar Sesion
                             </button>
-                        <!--
-                        <select name="profile">
-                        <option value=1>Cerrar Sesion</option>
-                        <option value="noth">No hacer nada</option>
-                        <input type="submit" value="Confirmar">
-                        </select>
-                        -->
                         </form>
                     </ul>
                 </div>
             </div>
         </div>
-
+        <br><br><br>
 <!-- Prueba de barra lateral -->
 
 
