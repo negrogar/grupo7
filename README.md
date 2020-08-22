@@ -1,4 +1,4 @@
-# Grupo7
+# Grupo7 - Verduleria
 Proyecto Integrador\
 Verduleria Online \
 1- Productos que ofrecemos:\
